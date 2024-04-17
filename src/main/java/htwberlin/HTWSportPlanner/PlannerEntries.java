@@ -2,17 +2,18 @@ package htwberlin.HTWSportPlanner;
 
 import java.sql.Time;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Date;
 
 public class PlannerEntries {
     private String courseName;
     private String description;
     private String weekDay;
-    private Time courseTime;
+    private LocalTime courseTime;
     private LocalDate startDate;
     private LocalDate endDate;
 
-    public PlannerEntries(String courseName, String description, String weekDay, Time courseTime, LocalDate startDate, LocalDate endDate) {
+    public PlannerEntries(String courseName, String description, String weekDay, LocalTime courseTime, LocalDate startDate, LocalDate endDate) {
         this.courseName = courseName;
         this.description = description;
         this.weekDay = weekDay;
@@ -33,7 +34,7 @@ public class PlannerEntries {
         return weekDay;
     }
 
-    public Time getCourseTime() {
+    public LocalTime getCourseTime() {
         return courseTime;
     }
 
