@@ -7,15 +7,15 @@ import java.util.Date;
 
 public class PlannerEntries {
     private String courseName;
-    private String description;
+    private String management;
     private String weekDay;
     private LocalTime courseTime;
     private LocalDate startDate;
     private LocalDate endDate;
 
-    public PlannerEntries(String courseName, String description, String weekDay, LocalTime courseTime, LocalDate startDate, LocalDate endDate) {
+    public PlannerEntries(String courseName, String management, String weekDay, LocalTime courseTime, LocalDate startDate, LocalDate endDate) {
         this.courseName = courseName;
-        this.description = description;
+        this.management = management;
         this.weekDay = weekDay;
         this.courseTime = courseTime;
         this.startDate = startDate;
@@ -26,8 +26,8 @@ public class PlannerEntries {
         return courseName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getManagement() {
+        return management;
     }
 
     public String getWeekDay() {
