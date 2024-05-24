@@ -8,14 +8,16 @@ import java.util.Date;
 public class PlannerEntries {
     private String courseName;
     private String management;
+    private String place;
     private String weekDay;
     private LocalTime courseTime;
     private LocalDate startDate;
     private LocalDate endDate;
 
-    public PlannerEntries(String courseName, String management, String weekDay, LocalTime courseTime, LocalDate startDate, LocalDate endDate) {
+    public PlannerEntries(String courseName, String management, String place, String weekDay, LocalTime courseTime, LocalDate startDate, LocalDate endDate) {
         this.courseName = courseName;
         this.management = management;
+        this.place = place;
         this.weekDay = weekDay;
         this.courseTime = courseTime;
         this.startDate = startDate;
@@ -36,6 +38,10 @@ public class PlannerEntries {
 
     public LocalTime getCourseTime() {
         return courseTime;
+    }
+
+    public String getPlace() {
+        return place;
     }
 
     public LocalDate getStartDate() {
