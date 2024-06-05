@@ -1,11 +1,21 @@
 package htwberlin.HTWSportPlanner;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 
+
+@Entity
 public class PlannerEntries {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String courseName;
     private String management;
     private String place;
@@ -13,8 +23,11 @@ public class PlannerEntries {
     private LocalTime courseTime;
     private LocalDate startDate;
     private LocalDate endDate;
+    public PlannerEntries(){}
 
-    public PlannerEntries(String courseName, String management, String place, String weekDay, LocalTime courseTime, LocalDate startDate, LocalDate endDate) {
+
+    public PlannerEntries(Long id, String courseName, String management, String place, String weekDay, LocalTime courseTime, LocalDate startDate, LocalDate endDate) {
+        this.id = id;
         this.courseName = courseName;
         this.management = management;
         this.place = place;
