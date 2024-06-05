@@ -8,11 +8,11 @@ public class PlannerService {
     @Autowired
     EntriesRepository repo;
 
-    public PlannerEntries save(PlannerEntries entry){
+    public PlannerEntry save(PlannerEntry entry){
         return repo.save(entry);
     }
 
-    public PlannerEntries get(Long id){
+    public PlannerEntry get(Long id){
         return repo.findById(id).orElseThrow(() -> new RuntimeException());
     }
 }

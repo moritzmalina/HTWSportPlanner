@@ -5,14 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
 
 
 @Entity
-public class PlannerEntries {
+public class PlannerEntry {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,10 +21,10 @@ public class PlannerEntries {
     private LocalTime courseTime;
     private LocalDate startDate;
     private LocalDate endDate;
-    public PlannerEntries(){}
+    public PlannerEntry(){}
 
 
-    public PlannerEntries(Long id, String courseName, String management, String place, String weekDay, LocalTime courseTime, LocalDate startDate, LocalDate endDate) {
+    public PlannerEntry(Long id, String courseName, String management, String place, String weekDay, LocalTime courseTime, LocalDate startDate, LocalDate endDate) {
         this.id = id;
         this.courseName = courseName;
         this.management = management;
@@ -35,6 +33,10 @@ public class PlannerEntries {
         this.courseTime = courseTime;
         this.startDate = startDate;
         this.endDate = endDate;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getCourseName() {
