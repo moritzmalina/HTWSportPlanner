@@ -11,7 +11,7 @@ import java.util.List;
 // :)
 
 @RestController
-@CrossOrigin(origins = "https://htwsportplannerfrontend.onrender.com/")
+//@CrossOrigin(origins = "https://htwsportplannerfrontend.onrender.com/")
 public class MyController {
 
     @Autowired
