@@ -22,10 +22,9 @@ public class MyController {
         return service.save(entry);
     }
 
-    @GetMapping("entries/{id}")
-    public PlannerEntry getEntry(@PathVariable String id){
-        Long entryId = Long.parseLong(id);
-        return service.get(entryId);
+    @GetMapping("/entries")
+    public List<PlannerEntry> getAllEntries() {
+        return service.getAll();
     }
 
     @DeleteMapping("/entries/{id}")
