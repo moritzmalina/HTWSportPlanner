@@ -15,4 +15,7 @@ public class PlannerService {
     public PlannerEntry get(Long id){
         return repo.findById(id).orElseThrow(() -> new RuntimeException());
     }
+
+    public void delete(Long id) {repo.deleteById(id);
+    }
 }
