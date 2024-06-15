@@ -3,9 +3,6 @@ package htwberlin.HTWSportPlanner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.List;
 
 // :)
@@ -31,5 +28,10 @@ public class MyController {
     public void deleteEntry(@PathVariable String id) {
         Long entryId = Long.parseLong(id);
         service.delete(entryId);
+    }
+
+    @GetMapping("/entries")
+    public List<PlannerEntry> getAllEntries() {
+        return service.getAll();
     }
 }
