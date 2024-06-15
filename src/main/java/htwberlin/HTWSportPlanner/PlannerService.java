@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class PlannerService {
@@ -24,17 +23,32 @@ public class PlannerService {
     }
 
     public PlannerEntry update(Long id, PlannerEntry updatedEntry) {
-        Optional<PlannerEntry> optionalEntry = repo.findById(id);
-        if (optionalEntry.isPresent()) {
-            PlannerEntry existingEntry = optionalEntry.get();
-            existingEntry.setCourseName(updatedEntry.getCourseName());
-            existingEntry.setWeekDay(updatedEntry.getWeekDay());
-            existingEntry.setPlace(updatedEntry.getPlace());
-            existingEntry.setCourseTime(updatedEntry.getCourseTime());
-            existingEntry.setStartDate(updatedEntry.getStartDate());
-            existingEntry.setEndDate(updatedEntry.getEndDate());
-            existingEntry.setManagement(updatedEntry.getManagement());
-            existingEntry.setSelected(updatedEntry.getSelected());
+        PlannerEntry existingEntry = repo.findById(id).orElse(null);
+        if (existingEntry != null) {
+            if (updatedEntry.getCourseName() != null) {
+                existingEntry.setCourseName(updatedEntry.getCourseName());
+            }
+            if (updatedEntry.getWeekDay() != null) {
+                existingEntry.setWeekDay(updatedEntry.getWeekDay());
+            }
+            if (updatedEntry.getPlace() != null) {
+                existingEntry.setPlace(updatedEntry.getPlace());
+            }
+            if (updatedEntry.getCourseTime() != null) {
+                existingEntry.setCourseTime(updatedEntry.getCourseTime());
+            }
+            if (updatedEntry.getStartDate() != null) {
+                existingEntry.setStartDate(updatedEntry.getStartDate());
+            }
+            if (updatedEntry.getEndDate() != null) {
+                existingEntry.setEndDate(updatedEntry.getEndDate());
+            }
+            if (updatedEntry.getManagement() != null) {
+                existingEntry.setManagement(updatedEntry.getManagement());
+            }
+            if (updatedEntry.getSelected() != null) {
+                existingEntry.setSelected(updatedEntry.getSelected());
+            }
             return repo.save(existingEntry);
         } else {
             throw new RuntimeException("Entry not found with id " + id);

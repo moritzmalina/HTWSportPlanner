@@ -2,10 +2,10 @@ POST http://localhost:8080/entries
 Content-Type: application/json
 
 {
-  "courseName": "Aerobics",
-  "management": "Angelo Merte",
-  "place": "HTW Wilhelminenhof",
-  "weekDay": "Donnerstag",
+  "courseName": "Test",
+  "management": "Test",
+  "place": "Test",
+  "weekDay": "Test",
   "courseTime": "19:30:00",
   "startDate": "2024-03-01",
   "endDate": "2024-07-30"
