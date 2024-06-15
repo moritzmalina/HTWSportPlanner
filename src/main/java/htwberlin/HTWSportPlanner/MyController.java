@@ -34,4 +34,9 @@ public class MyController {
     public List<PlannerEntry> getAllEntries() {
         return service.getAll();
     }
+
+    @PatchMapping("/entries/{id}")
+    public PlannerEntry updateEntry(@PathVariable Long id, @RequestBody PlannerEntry updatedEntry) {
+        return service.update(id, updatedEntry);
+    }
 }

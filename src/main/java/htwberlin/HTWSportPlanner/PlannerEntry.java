@@ -70,5 +70,41 @@ public class PlannerEntry {
     }
 
     public Boolean getSelected(){ return selected;}
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public void setManagement(String management) {
+        this.management = management;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public void setWeekDay(String weekDay) {
+        this.weekDay = weekDay;
+    }
+
+    public void setCourseTime(LocalTime courseTime) {
+        this.courseTime = courseTime;
+    }
+
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
+
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+    }
+
+    public void setSelected(Boolean selected) {
+        this.selected = selected;
+    }
 }
 
