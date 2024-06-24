@@ -22,10 +22,12 @@ public class PlannerEntry {
     private LocalDate startDate;
     private LocalDate endDate;
     private Boolean selected;
+    private Boolean color;
+    private String description;
     public PlannerEntry(){}
 
 
-    public PlannerEntry(Long id, String courseName, String management, String place, String weekDay, LocalTime courseTime, LocalDate startDate, LocalDate endDate, Boolean selected) {
+    public PlannerEntry(Long id, String courseName, String management, String place, String weekDay, LocalTime courseTime, LocalDate startDate, LocalDate endDate, Boolean selected, Boolean color, String description) {
         this.id = id;
         this.courseName = courseName;
         this.management = management;
@@ -35,6 +37,8 @@ public class PlannerEntry {
         this.startDate = startDate;
         this.endDate = endDate;
         this.selected = selected;
+        this.color = color;
+        this.description = description;
     }
 
     public Long getId() {
@@ -105,6 +109,22 @@ public class PlannerEntry {
 
     public void setSelected(Boolean selected) {
         this.selected = selected;
+    }
+
+    public Boolean getColor() {
+        return color;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setColor(Boolean color) {
+        this.color = color;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
 

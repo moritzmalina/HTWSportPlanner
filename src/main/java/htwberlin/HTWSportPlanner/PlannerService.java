@@ -49,6 +49,12 @@ public class PlannerService {
             if (updatedEntry.getSelected() != null) {
                 existingEntry.setSelected(updatedEntry.getSelected());
             }
+            if (updatedEntry.getColor() != null) {
+                existingEntry.setColor(updatedEntry.getColor());
+            }
+            if (updatedEntry.getDescription() != null) {
+                existingEntry.setDescription(updatedEntry.getDescription());
+            }
             return repo.save(existingEntry);
         } else {
             throw new RuntimeException("Entry not found with id " + id);
