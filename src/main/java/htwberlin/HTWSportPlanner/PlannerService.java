@@ -60,4 +60,9 @@ public class PlannerService {
             throw new RuntimeException("Entry not found with id " + id);
         }
     }
+
+    public boolean existsByTitleAndDay(String title, String day) {
+        return repo.existsByCourseNameAndWeekDay(title, day);
+    }
+
 }
