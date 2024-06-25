@@ -21,7 +21,7 @@ public class ScraperScheduler {
     private PlannerService plannerService;
 
     private final RestTemplate restTemplate = new RestTemplate();
-    private final String scraperUrl = "http://localhost:4000/scraper";
+    private final String scraperUrl = "https://htw-scraper.onrender.com/scraper";
 
     @Scheduled(fixedRate = 3600000) // Run every 1 hour
     public void updateCoursesFromScraper() {
