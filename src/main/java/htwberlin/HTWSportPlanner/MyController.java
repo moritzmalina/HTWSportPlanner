@@ -8,6 +8,7 @@ import java.util.List;
 // :)
 
 @RestController
+@RequestMapping("/")
 //@CrossOrigin(origins = "https://htwsportplannerfrontend.onrender.com/")
 public class MyController {
 
