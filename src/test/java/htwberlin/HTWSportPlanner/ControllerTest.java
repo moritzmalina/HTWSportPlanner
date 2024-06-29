@@ -78,7 +78,7 @@ public class ControllerTest {
         mockMvc.perform(MockMvcRequestBuilders
                         .get("/entries")
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$[1].courseName", is("Kickboxen")));
+                .andExpect(jsonPath("$[1].courseName", is("Kickboxenn")));
     }
 
     @Test
