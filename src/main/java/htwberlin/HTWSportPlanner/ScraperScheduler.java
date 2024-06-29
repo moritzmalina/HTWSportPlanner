@@ -79,7 +79,8 @@ public class ScraperScheduler {
         return value.length() > length ? value.substring(0, length) : value;
     }
     private LocalTime parseLocalTime(String time) {
-        return LocalTime.parse(time, DateTimeFormatter.ofPattern("HH:mm"));
+        LocalTime localTime = LocalTime.parse(time, DateTimeFormatter.ofPattern("HH:mm"));
+        return localTime.plusHours(1);
     }
 
     private LocalDate[] parseZeitraum(String zeitraum) {
