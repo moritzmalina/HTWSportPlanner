@@ -37,7 +37,7 @@ gradlew build
 
 Starten Sie die Anwendung:
 ```bash
-.
+./gradlew build
 ```
 
 
